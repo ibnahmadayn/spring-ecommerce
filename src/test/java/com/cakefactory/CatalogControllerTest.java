@@ -1,8 +1,8 @@
 package com.cakefactory;
 
 import com.cakefactory.catalog.CatalogController;
-import com.cakefactory.catalog.InMemoryCatalogService;
 import com.cakefactory.catalog.Item;
+import com.cakefactory.catalog.persistence.JpaCatalogService;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +29,7 @@ public class CatalogControllerTest {
     MockMvc mockMvc;
 
     @MockBean
-    InMemoryCatalogService catalog;
+    JpaCatalogService catalog;
 
     @BeforeEach
     void setUp() {

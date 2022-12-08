@@ -1,5 +1,6 @@
 package com.cakefactory.catalog;
 
+import com.cakefactory.catalog.persistence.JpaCatalogService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +12,9 @@ import java.util.Map;
 @RequestMapping("/catalog")
 public class CatalogController {
 
-    final InMemoryCatalogService catalog;
+    final JpaCatalogService catalog;
 
-    public CatalogController(InMemoryCatalogService catalog) {
+    public CatalogController(JpaCatalogService catalog) {
         this.catalog = catalog;
     }
 
