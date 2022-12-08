@@ -1,4 +1,4 @@
-package com.cakefactory;
+package com.cakefactory.catalog;
 
 import java.math.BigDecimal;
 
